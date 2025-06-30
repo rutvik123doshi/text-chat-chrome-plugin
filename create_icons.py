@@ -1,0 +1,14 @@
+import base64
+
+def create_icon_from_base64(size, base64_string, filename):
+    img_data = base64.b64decode(base64_string)
+    with open(filename, 'wb') as f:
+        f.write(img_data)
+
+icon16_base64 = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAB5JREFUOE9jZCAS/O/AwMDw/z8YjmYABgYGBkYGFwAA/uY/v2+Mr4wAAAAASUVORK5CYII="
+icon48_base64 = "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAADJJREFUaAXt0AENAAAIArD/P2kLhg1g14EBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBgZ0DAz4AAT8r3WgAAAAASUVORK5CYII="
+icon128_base64 = "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAFRJREFUeJztwQEBAAAAgiD/r25IQAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAYF3gAAbAAG/XU3YAAAAAElFTkSuQmCC"
+
+create_icon_from_base64(16, icon16_base64, 'images/icon16.png')
+create_icon_from_base64(48, icon48_base64, 'images/icon48.png')
+create_icon_from_base64(128, icon128_base64, 'images/icon128.png')

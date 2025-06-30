@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Right-Click Assistant",
+  "version": "1.0",
+  "description": "Select text on any webpage, right-click, and ask questions. Also, get a summary of the page.",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {},
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["overlay.css"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["overlay.css", "popup.html", "options.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

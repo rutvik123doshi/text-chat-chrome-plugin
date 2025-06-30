@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Assistant Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1>ChatGPT Assistant Options</h1>
+  <div id="container">
+      <label for="api-key">ChatGPT API Key:</label>
+      <input type="password" id="api-key" size="40">
+      <button id="save">Save</button>
+      <div id="api-key-display">
+          <strong>Current API Key:</strong> <span id="current-api-key"></span>
+          <button id="view-delete" data-action="view">View</button>
+      </div>
+      <p id="status"></p>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
